@@ -1,6 +1,6 @@
 {
-  "name": "citiryder",
-  "version": "0.0.0",
+  "name": "mbt",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
