@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BuglistService } from '../services/buglist.service';
 
 @Component({
   selector: 'app-bugs',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BugsComponent implements OnInit {
 
-  constructor() { }
+  buglistdata: any;
+
+  constructor(private buglist: BuglistService) { }
 
   ngOnInit(): void {
+    this.buglist.getBugList().subscribe((result) => {
+      this.buglistdata = result;
+    });
   }
 
 }
